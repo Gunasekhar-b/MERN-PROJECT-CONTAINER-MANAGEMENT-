@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  <!-- CSS only -->
+  <link rel="stylesheet" href=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  	</script>
+  	<script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+  	</script>
+  	<script src=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+  	</script>
+
+  <style>
+    body{
+      background-image:url("image.jpg");
+      text-align:center;
+       background-size: 100vw 100vh;
+       background-repeat:no-repeat;
+       color:white;
+    }
+    form{
+      background-color:white;
+      width:65%;
+      opacity:0.8;
+      margin:10% auto;
+
+      border-radius:20px;
+
+    }
+    h1{
+      margin:20px;
+      color:teal;
+    }
+    input{
+      margin:20px;
+    }
+  </style>
+    </head>
+
+  <body>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:#0078AA">
+
+   <a class="navbar-brand" href=""> Docker <img src="icon1.png" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<!-- NAVBAR -->
+
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+    <ul class="navbar-nav ml-auto">
+        <li CLASS="nav-item">
+            <a class="nav-link" href="">Home</a>
+        </li>
+         <li CLASS="nav-item">
+            <a class="nav-link" href="/about">About</a>
+        </li>
+         <li CLASS="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+        </li>
+
+    </ul>
+    </div>
+</nav>
+
+
+<!-- FORM -->
+<form action="/send" method="get">
+<label for="mainone"><h1>Enter the command</h1></label>
+<!-- SUBMIT -->
+ <input id="mainone" type="text" name="cmd" value="" >
+<input type="submit" class="btn btn-info btn-lg" name="" value="Submit"><br/>
+<!-- REMAINING BUTTONS -->
+</br/>
+<div class="row">
+<div class="col-md-6 col-lg-3" >
+  <input onclick="fun1('docker pull ')" type="submit" class="btn btn-info btn-lg" id="spec" name="" value="Pull The Image">
+</div>
+
+<div class="col-md-6 col-lg-3" >
+    <input type="submit" onclick="fun('docker images')" class="btn btn-info btn-lg" name="" value="Docker Images">
+</div>
+<div class="col-md-6 col-lg-3" >
+  <input type="submit" onclick="fun4()" class="btn btn-info btn-lg" name="" value="Launch OS">
+</div>
+
+<div class="col-md-6 col-lg-3" >
+    <input type="submit" onclick="fun('docker ps -a ')" class="btn btn-info btn-lg" name="" value="All Containers">
+</div>
+<div class="col-md-6 col-lg-3" >
+  <input type="submit" onclick="fun('docker ps')" class="btn btn-info btn-lg" name="" value="Running Containers">
+</div>
+
+<div class="col-md-6 col-lg-3" >
+    <input type="submit" onclick="fun2('docker start ')" class="btn btn-info btn-lg" name="" value="Start Container">
+</div>
+<div class="col-md-6 col-lg-3" >
+  <input type="submit" onclick="fun5()" class="btn btn-info btn-lg" name="" value="Relaunch Container">
+</div>
+
+<div class="col-md-6 col-lg-3" >
+    <input type="submit" onclick="fun2('docker stop ')"class="btn btn-info btn-lg" name="" value="Stop Container">
+</div>
+
+
+
+<div class="col-md-6 col-lg-3" >
+  <input type="submit" onclick="fun2('docker rm ')" class="btn btn-info btn-lg" name="" value="Remove Container">
+</div>
+
+<div class="col-md-6 col-lg-3" >
+    <input type="submit" onclick="fun2('docker rmi ')" class="btn btn-info btn-lg" name="" value="Remove Image">
+</div>
+<div class="col-md-6 col-lg-3" >
+  <input type="submit" onclick="fun('yes | docker container prune')" class="btn btn-info btn-lg" name="" value="Remove Containers">
+</div>
+
+<div class="col-md-6 col-lg-3" >
+    <input type="submit" onclick="fun('docker --version ')"class="btn btn-info btn-lg" name="" value="Docker Version">
+</div>
+
+</div>
+
+
+
+
+
+</form>
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript">
+function fun(a){
+
+document.getElementById("mainone").value=a;
+}
+
+function fun1(a){
+var b=prompt("Enter the Image Name");
+document.getElementById("mainone").value=a+b;
+}
+
+function fun2(a){
+var d=prompt("Enter the Container ID");
+document.getElementById("mainone").value=a+d;
+// document.getElementById("mainone").value=a+" "+d+" "+c;
+
+
+}
+
+function fun3(a){
+var e=prompt("Enter the Container id");
+document.getElementById("mainone").value=a+e;
+}
+
+function fun4(){
+var id=prompt("Enter the OS Image Name");
+var command="docker run -dit "+id;
+
+var k="gnome-terminal --command=\"bash -c \'"+command+";$SHELL\'\"";
+document.getElementById("mainone").value=k;
+
+}
+
+
+function fun5(){
+var id=prompt("Enter the Container Name");
+var command="docker attach "+id;
+
+var k="gnome-terminal --command=\"bash -c \'"+command+";$SHELL\'\"";
+document.getElementById("mainone").value=k;
+
+}
+
+
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+
+
+<script src="https://use.fontawesome.com/e632266fa0.js"></script>
+
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="style.css"
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&family=Ubuntu&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<section class="header">
+
+
+
+
+
+<nav>
+<a href="index.html"><img src="logo.png" alt=" "></img></a>
+<div class="nav-links" id="navLinks">
+
+<i class="fa fa-times" onclick="hideMenu()"></i>
+<ul>
+
+<li> <a href="/">HOME </a></li>
+<li> <a href="#" >ABOUT </a></li>
+<li> <a href="/contact">CONTACT</a></li>
+
+</div>
+<i class="fa fa-bars"onclick="showMenu()"></i>
+</nav>
+
+<div class="text-box">
+<h1>Developers Love Docker.</h1>
+<p>Accelerate how you build, share, and run modern applications.</p>
+<a href="https://www.docker.com/"target="_blank" class="hero-btn">Visit us to know More</a>
+
+
+</div>
+</section>
+
+<section class="course">
+<h1> Docker vs Hypervisor vs Bare-Metal</h1>
+<p>
+	Docker is designed for running a single process in each container. Nevertheless, Docker is better at abstracting resources and, as a result, its containers tend to be more portable than Others
+</p>
+<div class="row">
+<div class="course-col">
+<h3>Docker</h3>
+<p>
+<img src="container.jpg" height="100%" width="100%">
+</p>
+</div>
+
+<div class="course-col">
+<h3>Hypervisor</h3>
+<p>
+	<img src="vm.jpg"  height="100%" width="100%">
+
+</p>
+</div>
+
+<div class="course-col">
+<h3>Bare-Metal</h3>
+<p>
+	<img src="baremetal.jpg"  height="100%" width="100%">
+	</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- facilities -->
+<section class="facilities">
+<h1>Feature Of Docker </h1>
+<p>
+There are several reasons behind the huge popularity of Docker. Or we can say, there are various Docker features which makes it stand out from the crowd
+</p>
+<div class="row">
+<div class="facilities-col">
+<img src="scalable.jpeg" style="border:1px solid grey;">
+<h3>Scalability</h3>
+<p>Due to lightweight containers of Docker, they are very easily scalable.We can Increase/Decrease the Containers</p>
+</div>
+
+<div class="facilities-col">
+<img src="isolation.png" style="border:1px solid grey;">
+<h3>Application Isolation</h3>
+<p>Docker offers containers which are further used to run applications in the isolation environment. The best thing about this Docker feature is here each container is independent to another and further.</p>
+</div>
+
+<div class="facilities-col">
+<img src="fast.png">
+<h3>Easy and Faster Configuration</h3>
+<p>We can deploy our code in less time and effort. As Docker can be used in a wide variety of environments, the requirements of the infrastructure are no longer linked with the environment of the application.</p>
+</div>
+
+<div class="facilities-col">
+<img src="productive.png">
+<h3>Productivity</h3>
+<p>Docker increase productivity, by easing technical configuration and rapid deployment of the application. Moreover, it helps to execute the application inane isolated environment and also reduces the resources.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- testimonials-->
+
+<section class="testimonials">
+<h1>What Docker User Says</h1>
+<p>Great for building code in a different architecture than host os</p>
+<div class="row">
+<div class="testimonials-col">
+<img src="prof2.jpeg">
+<div>
+<p>Overall docker help developers to deploy and set project on local env in short time and solves problems that happen during setting project on different OS, so my experience is using docker is good.
+
+</p>
+<h3>Tigran H.</h3>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+
+<i class="fa fa-star-half-o"></i>
+</div>
+</div>
+
+
+<div class="testimonials-col">
+<img src="prof1.jpeg">
+<div>
+<p>We were trying to isolate applications without the need of hosting them on different VM's. Docker was ideal for that. We could separate applications on one VM in different containers.
+</p>
+<h3>Fabian F.</h3>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-o"></i>
+
+</div>
+</div>
+
+
+
+
+
+</div>
+</section>
+
+<!------Contact Us-->
+<section class="cta">
+<h1>For any Queries Click on the below Link</h1>
+<a class="hero-btn" href=" ">Contact Us</a>
+</section>
+
+</section>
+
+
+<section class="footer">
+	<h4>About Us</h4>
+	<p class="fotterpara">We simplify the lives of developers who are making world-changing apps.
+</p>
+<div class="icons">
+	<a href="https://www.facebook.com/docker.run" target="_blank">
+<i class="fa fa-facebook" style="color:blue"></i></a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://twitter.com/docker"target="_blank"><i class="fa fa-twitter" style="color: skyblue"></i></a>
+&nbsp;&nbsp;&nbsp;
+<i class="fa fa-instagram" style="color:rgb(131,58,180);"></i>
+&nbsp;&nbsp;&nbsp;
+<a href="https://www.linkedin.com/company/docker/"target="_blank"><i class="fa fa-linkedin" style="color:#0077b5"></i></a>
+</div>
+<p> connect to us using above platforms</p>
+</section>
+
+
+</section>
+
+<!-- JS Toggle -->
+<script>
+	var navLinks=document.getElementById("navLinks");
+	function showMenu(){
+		navLinks.style.right="0px";
+	}
+	function hideMenu(){
+		navLinks.style.right="-200px";
+	}
+</script>
+
+</body>
+</html>

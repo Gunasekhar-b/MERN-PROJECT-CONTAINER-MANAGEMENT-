@@ -1,0 +1,23 @@
+body{
+    background-image:url("image.jpg");
+    text-align:center;
+     background-size: 100vw 100vh;
+     background-repeat:no-repeat;
+     color:white;
+  }
+form{
+    background-color:white;
+    width:65%;
+    opacity:0.8;
+    margin:10% auto;
+
+    border-radius:20px;
+
+  }
+h1{
+    margin:20px;
+    color:teal;
+  }
+input{
+    margin:20px;
+  }
